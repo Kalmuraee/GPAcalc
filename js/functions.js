@@ -1,5 +1,4 @@
 
-<SCRIPT>
 
 		//var c1=document.getElementById("H1");
 		//var strUser=c1.options[e.selectedIndex].value;
@@ -61,4 +60,4 @@ var get_id = new Array();
 	
 //document.getElementByID("Calc");
 
-		</SCRIPT>
+
