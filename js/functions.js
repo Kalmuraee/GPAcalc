@@ -36,18 +36,20 @@ var get_id = new Array();
 
 		function claculate()//onclick button calculate in HTML to calculate the Total GPA
 		{
-					for (var j=0;j<get_id.length;j++){
+				for (var j=0;j<get_id.length;j++){
 			document.getElementById("Result").innerHTML="Your Overall GPA is:"+"\n";
+				}
 		}
 
 		
 
-		function clear()//to clear the forms and the drop list on GPAcalc.html
+		function clear() //to clear the forms and the drop list on GPAcalc.html
 		{
 		
 		    if (document.selection) 
               document.selection.clear ();
 		}
+
 	
 //document.getElementByID("Calc");
 
