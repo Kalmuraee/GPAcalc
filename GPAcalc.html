@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<TITLE>
+
+		</TITLE>
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</HEAD>
+
+	<BODY>
+
+
+
+
+		<SCRIPT type="text/javascript">
+		//var c1=document.getElementById("H1");
+		//var strUser=c1.options[e.selectedIndex].value;
+		//var strUser2=c1.options[e.selectedIndex].text;
+
+//document.getElementById("oh").innerHTML=c1+" and "+strUser+"and"strUser2;
+
+
+//Equation (Grade * hours)+(Grade * Hours)/Total sum of hours
+
+
+
+var get_id = new Array();
+
+
+		function changeVal(){
+			for(var i=1;i<b1.length;i++){
+				for(var j=1;j<=2;j++){
+			//var get_id= document.getElementById(b1);
+			get_id[i]=document.getElementById('b'+i);
+			alert(get_id[i][get_id[i].selectedIndex].value);
+		}
+	}
+
+	function clear(){
+
+		document.getElementById("mySelect").selectedIndex="0";
+	}
+
+	function calculation(){
+
+
+
+
+
+
+
+		
+		};
+	
+
+		function claculate()
+		{
+			for (var j=0;j<get_id.length;j++){
+			document.getElementById("Result").innerHTML="Your Overall GPA is:"+"\n";
+	}
+
+		}
+
+		function clear() {
+		
+		    if (document.selection) 
+              document.selection.clear ();
+		}
+
+
+
+		}
+	
+//document.getElementByID("Calc");
+
+		</SCRIPT>
+
+
+
+
+		<div id="GPACalc" class="container-fluid  container " >
+
+		
+
+		<!-- Beginning of the table -->
+		<table class="table table-hover">
+			<tr>
+				<td>Course Name</td>
+				<td>Credit Hours</td>
+				<td>Grade</td>
+			</tr>
+
+
+			<tr>
+				<td>
+
+					<input class="form-control" type="text" id="a1">
+
+			</td>
+			<td>
+			<select class="form-control" onchange="changeVal()" id="b1">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+			</select>
+								</td>
+				<td>
+			<select class="form-control" onchange="changeVal()" id="c1">
+				<option value=>-Select-</option>
+				<option value="4">A+</option>
+				<option value="3.75">A</option>
+				<option value="3.50">B+</option>
+				<option value="3.00">B</option>
+				<option value="2.50">C+</option>
+				<option value="2.00">C</option>
+				<option value="1.50">D+</option>
+				<option value="1.00">D</option>
+				<option value="0">F</option>
+				<option value="0">WF</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+				<td><input class="form-control" type="text" id="a2">			
+	</td>
+	<td>
+			<select class="form-control" onchange="changeVal()" id="b2">
+				<option value=0>0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+			</select>					</td>
+				<td>
+			<select class="form-control" onchange="changeVal()" id="c2">
+				<option value=>-Select-</option>
+				<option value="4">A+</option>
+				<option value="3.75">A</option>
+				<option value="3.50">B+</option>
+				<option value="3.00">B</option>
+				<option value="2.50">C+</option>
+				<option value="2.00">C</option>
+				<option value="1.50">D+</option>
+				<option value="1.00">D</option>
+				<option value="0">F</option>
+				<option value="0">WF</option>
+			</select>
+	</td>
+		</tr>
+
+		<tr>
+				<td>
+					<input class="form-control" type="text" id="a3">
+
+				</td>
+				<td>
+			<select class="form-control" onchange="changeVal()" id="b3">
+				<option value=0>0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+			</select>
+							</td>
+				<td>
+			<select class="form-control" onchange="changeVal()" id="c3">
+				<option value=>-Select-</option>
+				<option value="4">A+</option>
+				<option value="3.75">A</option>
+				<option value="3.50">B+</option>
+				<option value="3.00">B</option>
+				<option value="2.50">C+</option>
+				<option value="2.00">C</option>
+				<option value="1.50">D+</option>
+				<option value="1.00">D</option>
+				<option value="0">F</option>
+				<option value="0">WF</option>
+			</select>
+	</td>
+			</tr>
+<!-- Forth raw -->
+<tr>
+<td>
+					<input class="form-control" type="text" id="a4">
+
+				</td>
+				<td>
+			<select class="form-control" onchange="changeVal()" id="b4">
+				<option value=0>0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+			</select>
+							</td>
+				<td>
+			<select class="form-control" onchange="changeVal()" id="c4">
+				<option value=>-Select-</option>
+				<option value="4">A+</option>
+				<option value="3.75">A</option>
+				<option value="3.50">B+</option>
+				<option value="3.00">B</option>
+				<option value="2.50">C+</option>
+				<option value="2.00">C</option>
+				<option value="1.50">D+</option>
+				<option value="1.00">D</option>
+				<option value="0">F</option>
+				<option value="0">WF</option>
+			</select>
+	</td>
+</tr>
+	<!-- Fifth raw -->
+	<tr>
+	<td>
+					<input class="form-control" type="text" id="a5">
+
+				</td>
+				<td>
+			<select class="form-control" onchange="changeVal()" id="b5">
+				<option value=0>0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+			</select>
+							</td>
+				<td>
+			<select class="form-control" onchange="changeVal()" id="c5">
+				<option value=>-Select-</option>
+				<option value="4">A+</option>
+				<option value="3.75">A</option>
+				<option value="3.50">B+</option>
+				<option value="3.00">B</option>
+				<option value="2.50">C+</option>
+				<option value="2.00">C</option>
+				<option value="1.50">D+</option>
+				<option value="1.00">D</option>
+				<option value="0">F</option>
+				<option value="0">WF</option>
+			</select>
+	</td>
+</tr>
+	<!-- Sixsth raw -->
+<tr>
+	<td>
+					<input class="form-control" type="text" id="a6">
+
+				</td>
+				<td>
+			<select class="form-control" onchange="changeVal()" id="b6">
+				<option value=0>0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+			</select>
+							</td>
+				<td>
+			<select class="form-control" onchange="changeVal()" id="c6">
+				<option value=>-Select-</option>
+				<option value="4">A+</option>
+				<option value="3.75">A</option>
+				<option value="3.50">B+</option>
+				<option value="3.00">B</option>
+				<option value="2.50">C+</option>
+				<option value="2.00">C</option>
+				<option value="1.50">D+</option>
+				<option value="1.00">D</option>
+				<option value="0">F</option>
+				<option value="0">WF</option>
+			</select>
+	</td>
+</tr>
+	<!-- Buttons -->
+
+
+		</table>
+
+
+
+
+		<button class="btn btn-default" onclick="claculate()">Calculate</button>
+		<button class="btn btn-default" onclick="clear()">Clear</button>
+
+<br/>
+<br/>
+<!-- Results Should be here -->
+<p id="Result"></p>
+
+
+
+
+
+<br/>
+<br/>
+
+
+		<!-- This is the Drop Down list for the grades -->
+			<select class="form-control" onchange="changeVal()">
+				<option value=>-Select-</option>
+				<option value="4">A+</option>
+				<option value="3.75">A</option>
+				<option value="3.50">B+</option>
+				<option value="3.00">B</option>
+				<option value="2.50">C+</option>
+				<option value="2.00">C</option>
+				<option value="1.50">D+</option>
+				<option value="1.00">D</option>
+				<option value="0">F</option>
+				<option value="0">WF</option>
+			</select>
+<!-- Drop down list for hours -->
+
+			<select class="form-control" onchange="changeVal()">
+				<option value=0>0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+			</select>
+
+
+
+
+		</div>
+
+
+
+
+<p id="oh" ></p>
+		<!-- The Results Should be Desplayed here -->
+
+
+
+
+</BODY>
+</HTML>
