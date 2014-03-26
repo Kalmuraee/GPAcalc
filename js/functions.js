@@ -29,7 +29,7 @@ var get_grd = new Array();
 			alert(get_val[i][get_val[i].selectedIndex].value);
 				}
 			}
-		}
+		
 		function changeGrd()//to save the Grade of the course
 	{
 
