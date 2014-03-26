@@ -1,7 +1,8 @@
 /**
 We have 3 functions to use in GPAcalc.html
 The first is: changeVal() to save the values of the drop list
-The Second is: calculate() to calculate and print the answer to the user in GPAcalc.html
+The Second is: calculate() to calculate and print the answer to the user in GPAcalc.html and the equation for calculation is (Grade * hours)+(Grade * Hours)+.../Total sum of hours
+
 The Third is: clear() to clear all selected values on drop list and the filled forms
 
 **//
