@@ -5,7 +5,7 @@ The Second is: calculate() to calculate and print the answer to the user in GPAc
 
 The Third is: clear() to clear all selected values on drop list and the filled forms
 
-**//
+**/
 
 		//var c1=document.getElementById("H1");
 		//var strUser=c1.options[e.selectedIndex].value;
