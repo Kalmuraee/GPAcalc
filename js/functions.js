@@ -1,9 +1,9 @@
 /**
 We have 3 functions to use in GPAcalc.html
-The first is: changeVal() to save the values of the drop list
-The Second is: calculate() to calculate and print the answer to the user in GPAcalc.html and the equation for calculation is (Grade * hours)+(Grade * Hours)+.../Total sum of hours
-
-The Third is: clear() to clear all selected values on drop list and the filled forms
+The first is: changeVal() to save the values of the hours drop list
+The Second is:changeGrd() to save the values of the grade gaind from the drop list
+The Thirs is: calculate() to calculate and print the answer to the user in GPAcalc.html and the equation for calculation is (Grade * hours)+(Grade * Hours)+.../Total sum of hours
+The Forth is: clear() to clear all selected values on drop list and the filled forms
 
 **/
 
@@ -18,25 +18,34 @@ The Third is: clear() to clear all selected values on drop list and the filled f
 
 
 
-var get_id = new Array();
-
+var get_val = new Array();
+var get_grd = new Array();
 
 		function changeVal()//to save the values of drop list in GPAcalc.html
 		{
 			for(var i=1;i<b1.length;i++){
-				for(var j=1;j<=2;j++){
-			//var get_id= document.getElementById(b1);
-			get_id[i]=document.getElementById('b'+i);
-			alert(get_id[i][get_id[i].selectedIndex].value);
+			//var get_val= document.getElementById(b1);
+			get_val[i]=document.getElementById('b'+i);
+			alert(get_val[i][get_val[i].selectedIndex].value);
 				}
 			}
 		}
+		function changeGrd()//to save the Grade of the course
+	{
 
-	
+		for (var i=1;i<=c1.length;i++)
+		{
+			get_grd[i]=document.getElementById('c'+i);
+			alert(get_grd[i][get_grd[i].selectedIndex].value);
+
+		}
+
+
+	}
 
 		function claculate()//onclick button calculate in HTML to calculate the Total GPA
 		{
-				for (var j=0;j<get_id.length;j++){
+				for (var j=0;j<get_val.length;j++){
 			document.getElementById("Result").innerHTML="Your Overall GPA is:"+"\n";
 				}
 		}
