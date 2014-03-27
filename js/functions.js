@@ -27,11 +27,16 @@ var sumOfHours=0;
 
 		function changeVal()//to save the values of drop list in GPAcalc.html
 		{
-			for(var i=1;i<b1.length;i++){
+			for(var i=1;i<6;i++){
 			//var get_val= document.getElementById(b1);
-			get_val[i]=document.getElementById('b'+i);
-			get_val[i]=get_val[i][get_val[i].selectedIndex].value;
-			sumOfHours+=get_val[i];
+			//get_val[i]=document.getElementById("b%d",i).selectedIndex.value;
+			//get_val[i]=document.getElementById("b%d",i).options.value;
+			//alert(get_val[i]);
+
+			//playground
+			var x = document.getElementById("b"+i).selectedIndex;
+			get_val[i]=document.getElementsByTagName("option")[x].value;
+
 				}
 
 			}
@@ -39,32 +44,34 @@ var sumOfHours=0;
 		function changeGrd()//to save the Grade of the course
 	{
 
-		for (var i=1;i<=c1.length;i++)
+		for (var i=1;i<=6;i++)
 		{
-			get_grd[i]=document.getElementById('c'+i);
-			get_grd[i]=[get_grd[i].selectedIndex].value;
+			var y = document.getElementById("c"+i).selectedIndex;
+			get_grd[i]=document.getElementsByTagName("option")[y].value;
 
 		}
 
 
 	}
 
-		function claculate()//onclick button calculate in HTML to calculate the Total GPA
+		function calculate()//  to calculate the Total GPA
 		{
-				for (var j=1;j<=d1.length;j++)
+				for (var i=1;i<=6;i++)
 				{
 					total=get_val[i]*get_grd[i];
-					sumOfTotal+=total;
+					(isNaN(total) ? 0 : sumOfTotal+=total) 
+					//sumOfTotal+=total;
 
 				}
-
-				for (var i=1;i<=d1.length;i++)//sum of all hours
+				
+				for (var i=1;i<=6;i++)//sum of all hours
 				{
 
-					sumOfHours+=get_val[i];
+					(isNaN(get_val[i]) ? 0 : sumOfHours+=parseInt(get_val[i])) 
 
 				}
-
+				alert(sumOfHours);
+				
 				return sumOfTotal/sumOfHours;
 					
 				
