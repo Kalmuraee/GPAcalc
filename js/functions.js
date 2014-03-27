@@ -75,13 +75,13 @@ var sumOfHours=0;
 
 		function clear() //to clear the forms and the drop list on GPAcalc.html
 		{
-		
-			for (var i=1;i<=6;i++){	
-				document.getElementById("a"+i).reset();	   
+			document.forms["a1"].reset();
+			//for (var i=1;i<=6;i++){	
+				document.reset();	   
 				document.getElementById("b"+i).selectedIndex=1;
 				document.getElementById("c"+i).selectedIndex=0;
 
-			}
+			//}
 
 		}
 
