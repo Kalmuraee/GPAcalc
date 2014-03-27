@@ -27,7 +27,7 @@ var sumOfHours=0;
 
 		function changeVal()//to save the values of drop list in GPAcalc.html
 		{
-			for(var i=1;i<6;i++){
+			for(var i=1;i<=6;i++){
 			//var get_val= document.getElementById(b1);
 			//get_val[i]=document.getElementById("b%d",i).selectedIndex.value;
 			//get_val[i]=document.getElementById("b%d",i).options.value;
@@ -35,7 +35,8 @@ var sumOfHours=0;
 
 			//playground
 			var x = document.getElementById("b"+i).selectedIndex;
-			get_val[i]=document.getElementsByTagName("option")[x].value;
+			get_val[i]=parseInt(document.getElementsByTagName("option")[x].value);
+
 
 				}
 
@@ -47,7 +48,7 @@ var sumOfHours=0;
 		for (var i=1;i<=6;i++)
 		{
 			var y = document.getElementById("c"+i).selectedIndex;
-			get_grd[i]=document.getElementsByTagName("option")[y].value;
+			get_grd[i]=parseInt(document.getElementsByTagName("option")[y].value);
 
 		}
 
@@ -58,21 +59,22 @@ var sumOfHours=0;
 		{
 				for (var i=1;i<=6;i++)
 				{
-					total=get_val[i]*get_grd[i];
-					(isNaN(total) ? 0 : sumOfTotal+=total) 
+					(isNaN(get_val[i] || get_grd[i]) ? 0 : total=get_val[i]*get_grd[i]);
+					alert(total);
+					(isNaN(total) ? 0 : total+=total) 
 					//sumOfTotal+=total;
-
+					//alert(total);
 				}
 				
-				for (var i=1;i<=6;i++)//sum of all hours
+				for (var i=0;i<=6;i++)
 				{
-
 					(isNaN(get_val[i]) ? 0 : sumOfHours+=parseInt(get_val[i])) 
 
+
 				}
-				alert(sumOfHours);
+				//alert(total);
 				
-				return sumOfTotal/sumOfHours;
+				return total/sumOfHours;
 					
 				
 		}
