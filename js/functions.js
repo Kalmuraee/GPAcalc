@@ -20,14 +20,20 @@ The Forth is: clear() to clear all selected values on drop list and the filled f
 
 var get_val = new Array();
 var get_grd = new Array();
+var total=0 ;
+var sumOfTotal=0;
+var sumOfHours=0;
+
 
 		function changeVal()//to save the values of drop list in GPAcalc.html
 		{
 			for(var i=1;i<b1.length;i++){
 			//var get_val= document.getElementById(b1);
 			get_val[i]=document.getElementById('b'+i);
-			alert(get_val[i][get_val[i].selectedIndex].value);
+			get_val[i]=get_val[i][get_val[i].selectedIndex].value;
+			sumOfHours+=get_val[i];
 				}
+
 			}
 		
 		function changeGrd()//to save the Grade of the course
@@ -36,7 +42,7 @@ var get_grd = new Array();
 		for (var i=1;i<=c1.length;i++)
 		{
 			get_grd[i]=document.getElementById('c'+i);
-			alert(get_grd[i][get_grd[i].selectedIndex].value);
+			get_grd[i]=[get_grd[i].selectedIndex].value;
 
 		}
 
@@ -45,12 +51,32 @@ var get_grd = new Array();
 
 		function claculate()//onclick button calculate in HTML to calculate the Total GPA
 		{
-				for (var j=0;j<get_val.length;j++){
-			document.getElementById("Result").innerHTML="Your Overall GPA is:"+"\n";
+				for (var j=1;j<=d1.length;j++)
+				{
+					total=get_val[i]*get_grd[i];
+					sumOfTotal+=total;
+
 				}
+
+				for (var i=1;i<=d1.length;i++)//sum of all hours
+				{
+
+					sumOfHours+=get_val[i];
+
+				}
+
+				return sumOfTotal/sumOfHours;
+					
+				
 		}
 
-		
+		function viewResults()
+		{
+			document.getElementById("Result").innerHTML="Your Overall GPA is:"+calculate();
+
+		}
+
+
 
 		function clear() //to clear the forms and the drop list on GPAcalc.html
 		{
