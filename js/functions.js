@@ -7,11 +7,6 @@ The Forth is: clear() to clear all selected values on drop list and the filled f
 
 **/
 
-		//var c1=document.getElementById("H1");
-		//var strUser=c1.options[e.selectedIndex].value;
-		//var strUser2=c1.options[e.selectedIndex].text;
-
-//document.getElementById("oh").innerHTML=c1+" and "+strUser+"and"strUser2;
 
 
 //Equation (Grade * hours)+(Grade * Hours)/Total sum of hours
@@ -28,16 +23,8 @@ var sumOfHours=0;
 		function changeVal()//to save the values of drop list in GPAcalc.html
 		{
 			for(var i=1;i<=6;i++){
-			//var get_val= document.getElementById(b1);
-			//get_val[i]=document.getElementById("b%d",i).selectedIndex.value;
-			//get_val[i]=document.getElementById("b%d",i).options.value;
-			//alert(get_val[i]);
 
-			//playground
-			var x = document.getElementById("b"+i).selectedIndex;
-			get_val[i]=parseInt(document.getElementsByTagName("option")[x].value);
-
-
+			get_val[i]=parseInt(document.getElementById("b"+i).value);
 				}
 
 			}
@@ -47,8 +34,7 @@ var sumOfHours=0;
 
 		for (var i=1;i<=6;i++)
 		{
-			var y = document.getElementById("c"+i).selectedIndex;
-			get_grd[i]=parseInt(document.getElementsByTagName("option")[y].value);
+			get_grd[i]=parseInt(document.getElementById("c"+i).value);
 
 		}
 
@@ -59,20 +45,20 @@ var sumOfHours=0;
 		{
 				for (var i=1;i<=6;i++)
 				{
-					(isNaN(get_val[i] || get_grd[i]) ? 0 : total=get_val[i]*get_grd[i]);
-					alert(total);
-					(isNaN(total) ? 0 : total+=total) 
-					//sumOfTotal+=total;
-					//alert(total);
+
+					(isNaN(get_val[i] || get_grd[i]) ? 0 : sumOfTotal=get_val[i]*get_grd[i]);
+					
+					total=total+sumOfTotal;
+
 				}
-				
+
 				for (var i=0;i<=6;i++)
 				{
 					(isNaN(get_val[i]) ? 0 : sumOfHours+=parseInt(get_val[i])) 
 
 
 				}
-				//alert(total);
+				
 				
 				return total/sumOfHours;
 					
@@ -90,11 +76,16 @@ var sumOfHours=0;
 		function clear() //to clear the forms and the drop list on GPAcalc.html
 		{
 		
-		    if (document.selection) 
-              document.selection.clear ();
+			for (var i=1;i<=6;i++){	
+				document.getElementById("a"+i).reset();	   
+				document.getElementById("b"+i).selectedIndex=1;
+				document.getElementById("c"+i).selectedIndex=0;
+
+			}
+
 		}
 
 	
-//document.getElementByID("Calc");
+
 
 
