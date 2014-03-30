@@ -1,5 +1,5 @@
 /**
-We have 3 functions to use in GPAcalc.html
+We have 4 functions to use in GPAcalc.html
 The first is: changeVal() to save the values of the hours drop list
 The Second is:changeGrd() to save the values of the grade gaind from the drop list
 The Thirs is: calculate() to calculate and print the answer to the user in GPAcalc.html and the equation for calculation is (Grade * hours)+(Grade * Hours)+.../Total sum of hours
@@ -60,7 +60,8 @@ var sumOfHours=0;
 				}
 				
 				
-				return total/sumOfHours;
+				
+				return (isNaN(total/sumOfHours) ? "Sorry , There is something wrong" : (total/sumOfHours).toFixed(2)) ;
 					
 				
 		}
@@ -77,11 +78,11 @@ var sumOfHours=0;
 		{
 			document.forms["a1"].reset();
 			//for (var i=1;i<=6;i++){	
-				document.reset();	   
-				document.getElementById("b"+i).selectedIndex=1;
-				document.getElementById("c"+i).selectedIndex=0;
-
-			//}
+			//	document.reset();	   
+			//	document.getElementById("b"+i).selectedIndex=1;
+			//	document.getElementById("c"+i).selectedIndex=0;
+			//
+			//
 
 		}
 
