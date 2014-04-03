@@ -34,7 +34,7 @@ var sumOfHours=0;
 
 		for (var i=1;i<=6;i++)
 		{
-			get_grd[i]=parseInt(document.getElementById("c"+i).value);
+			get_grd[i]=parseFloat(document.getElementById("c"+i).value);
 
 		}
 
@@ -43,9 +43,11 @@ var sumOfHours=0;
 
 		function calculate()//  to calculate the Total GPA
 		{
+
 				for (var i=1;i<=6;i++)
 				{
 
+//alert(get_grd[i]);
 					(isNaN(get_val[i] || get_grd[i]) ? 0 : sumOfTotal=get_val[i]*get_grd[i]);
 					
 					total=total+sumOfTotal;
